@@ -47,7 +47,7 @@ namespace string_calculator
             // Arrange
             // Need to specify the data you are going to test
             // Method to be tested - create an object of class
-            string str3 = "1,2";
+            string str3 = "2,5";
             StringCalculator stringcalc3 = new StringCalculator();
 
             // Act
@@ -57,7 +57,26 @@ namespace string_calculator
             
             // Assert
             // Compare the response
-            Assert.Equal(3, result);
+            Assert.Equal(7, result);
+        }
+
+        [Fact]
+        public void StringWithMultipleNumsInputReturnsSum()
+        {
+            // Arrange
+            // Need to specify the data you are going to test
+            // Method to be tested - create an object of class
+            string str4 = "2,5,8,10";
+            StringCalculator stringcalc4 = new StringCalculator();
+
+            // Act
+            // What should happen - call the method
+
+            int result = stringcalc4.Add(str4);
+            
+            // Assert
+            // Compare the response
+            Assert.Equal(25, result);
         }
     }   
 }
