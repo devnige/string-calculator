@@ -35,7 +35,7 @@ namespace string_calculator
                 var sum = 0;
                 // Need to split the string using delimiter ","
                 
-                var charSeparators = new char[] { ' ', ',' };
+                var charSeparators = new char[] { ' ', ',', '\n' };
                 var subs = str.Split(charSeparators).ToList();
                 var numsList = subs.Select(s => int.Parse(s)).ToList();
                 // Add up the int for each element

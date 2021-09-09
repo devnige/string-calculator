@@ -78,5 +78,23 @@ namespace string_calculator
             // Compare the response
             Assert.Equal(25, result);
         }
+        [Fact]
+        public void StringWithMultipleNumsAndDiffSeparatorsInputReturnsSum()
+        {
+            // Arrange
+            // Need to specify the data you are going to test
+            // Method to be tested - create an object of class
+            string str5 = "2,5\n9,11";
+            StringCalculator stringcalc5 = new StringCalculator();
+
+            // Act
+            // What should happen - call the method
+
+            int result = stringcalc5.Add(str5);
+            
+            // Assert
+            // Compare the response
+            Assert.Equal(27, result);
+        }
     }   
 }
